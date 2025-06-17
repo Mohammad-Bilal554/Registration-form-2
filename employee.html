@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Employee Registration Form</h2>
+
+    <label for="formType">Select Registration Type</label>
+    <select id="formType" onchange="redirectForm()">
+      <option value="index.html">User Registration</option>
+      <option value="employee.html">Employee Registration</option>
+      <option value="owner.html">Owner Registration</option>
+    </select>
+    <br><br>
+
+    <form id="registrationForm">
+      <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+
+      <div class="input-group">
+        <label for="username">Employee ID</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="input-group">
+            <label for="password">Password</label>
+            <div class="pass_f">
+                <input type="password" id="password" name="password" required>
+                <span id="span_pass" onclick="changepass()"><i class="fa-solid fa-eye-slash" id="eye"></i></span>
+            </div>
+        </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <button type="submit">Submit</button>
+      <p id="errorMessage"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
